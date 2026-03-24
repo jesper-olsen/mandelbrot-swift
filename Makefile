@@ -9,7 +9,7 @@ $(TARGET): mandelbrot.swift
 	$(SWIFTC) $(SWIFT_FLAGS) mandelbrot.swift -o $(TARGET)
 
 small: mandelbrot
-	time ./mandelbrot png=1 width=1000 height=700 > image.dat
+	time ./mandelbrot png=1 width=1000 height=750 > image.dat
 	gnuplot topng.gp
 
 large: mandelbrot

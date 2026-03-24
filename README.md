@@ -98,7 +98,7 @@ Benchmarks were run on an **Apple M1** system with Swift version 6.2 (swiftlang-
 
 **Generating a 1000x750 data file:**
 ```sh
-% time ./mandelbrot png=1 width=1000 height=750 > image.dat
+time ./mandelbrot png=1 width=1000 height=750 > image.dat
 
 real    0m0.318s
 user    0m0.307s

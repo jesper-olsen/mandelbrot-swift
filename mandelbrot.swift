@@ -55,7 +55,6 @@ func asciiOutput(config: Config) {
 }
 
 /// Generates text output suitable for gnuplot.
-/// Uses a buffered approach similar to the C implementation for speed.
 func gpTextOutput(config: Config) {
     let fWidth = config.ur_x - config.ll_x
     let fHeight = config.ur_y - config.ll_y

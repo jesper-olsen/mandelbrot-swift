@@ -60,7 +60,7 @@ func gpTextOutput(config: Config) {
     let fHeight = config.ur_y - config.ll_y
     let stdout = FileHandle.standardOutput
 
-    for y in (1...config.height).reversed() {
+    for y in (0...config.height).reversed() {
         var rowString = ""
         rowString.reserveCapacity(config.width * 6) 
         

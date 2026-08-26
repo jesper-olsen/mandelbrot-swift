@@ -24,7 +24,7 @@ Single Thread/Multi-thread shows the number of seconds it takes to do a 5000x500
 | Python      | [mandelbrot-py](https://github.com/jesper-olsen/mandelbrot-py)       |     (pure) 93.3 | (jax)    5.9 |      |                     |
 | R           | [mandelbrot-R](https://github.com/jesper-olsen/mandelbrot-R)         |                 |              |      |                     |
 | Rust        | [mandelbrot-rs](https://github.com/jesper-olsen/mandelbrot-rs)       |             4.7 |          1.3 |      |                     |
-| **Swift**   | [mandelbrot-swift](https://github.com/jesper-olsen/mandelbrot-swift) |             4.5 |          1.2 |      |                     |
+| **Swift**   | [mandelbrot-swift](https://github.com/jesper-olsen/mandelbrot-swift) |             4.5 |          1.2 |  1.3 |               0.7   |
 | Tcl         | [mandelbrot-tcl](https://github.com/jesper-olsen/mandelbrot-tcl)     |           306.9 |              |      |                     |
 | Zig         | [mandelbrot-zig](https://github.com/jesper-olsen/mandelbrot-zig)     |             4.9 |          0.9 |  0.7 |               0.3   |
 
@@ -112,10 +112,16 @@ time ./mandelbrot png=1 width=5000 height=5000 > image.dat
 4.46s user 0.04s system 99% cpu 4.535 total
 ```
 
-**Generating a 5000x5000 data file multiple worker threads**
+**Generating a 5000x5000 data file with multiple worker threads**
 
 ```sh
 time ./mandelbrot_threaded png=1 width=5000 height=5000 > image.dat
 6.07s user 0.07s system 502% cpu 1.222 total
 ```
 
+**Generating a 5000x5000 data file with SIMD and multiple worker threads**
+
+```sh
+time ./mandelbrot_simd_threaded png=1 width=5000 height=5000 > image.dat
+1.51s user 0.05s system 220% cpu 0.708 total
+```
